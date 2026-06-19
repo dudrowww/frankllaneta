@@ -49,14 +49,22 @@ window.addEventListener("scroll", () => {
 
 // ── Scroll Reveal
 const ro = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
+  entries.forEach((e) => {
     if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add("visible"), i * 80);
+      e.target.classList.add("visible");
       ro.unobserve(e.target);
     }
   });
-}, { threshold: 0.07 });
-document.querySelectorAll(".reveal, .reveal-left").forEach(el => ro.observe(el));
+}, { threshold: 0, rootMargin: "0px 0px -40px 0px" });
+document.querySelectorAll(".reveal, .reveal-left").forEach(el => {
+  // If already in viewport on load (e.g. hero section on mobile), show immediately
+  const rect = el.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    el.classList.add("visible");
+  } else {
+    ro.observe(el);
+  }
+});
 
 // ── Skill bar animation
 const skillObs = new IntersectionObserver((entries) => {
@@ -72,7 +80,7 @@ const skillObs = new IntersectionObserver((entries) => {
       skillObs.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0, rootMargin: "0px 0px -20px 0px" });
 const sl = document.getElementById("skillList");
 if (sl) skillObs.observe(sl);
 
