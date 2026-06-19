@@ -7,6 +7,11 @@ const mobileDrawer = document.getElementById("mobileDrawer");
 const drawerOverlay = document.getElementById("drawerOverlay");
 
 function openDrawer() {
+  mobileDrawer.style.display = "flex";
+  drawerOverlay.style.display = "block";
+  // force reflow so transition fires
+  mobileDrawer.getBoundingClientRect();
+  drawerOverlay.getBoundingClientRect();
   hamburger.classList.add("open");
   mobileDrawer.classList.add("open");
   drawerOverlay.classList.add("open");
@@ -17,6 +22,11 @@ function closeDrawer() {
   mobileDrawer.classList.remove("open");
   drawerOverlay.classList.remove("open");
   document.body.style.overflow = "";
+  // hide after transition ends so it's fully out of the way
+  setTimeout(() => {
+    mobileDrawer.style.display = "none";
+    drawerOverlay.style.display = "none";
+  }, 360);
 }
 hamburger.addEventListener("click", () => {
   hamburger.classList.contains("open") ? closeDrawer() : openDrawer();
