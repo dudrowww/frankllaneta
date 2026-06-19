@@ -34,9 +34,11 @@ body {
   color: var(--text);
   overflow-x: hidden;
   line-height: 1.6;
+  -webkit-tap-highlight-color: transparent;
 }
+a, button { touch-action: manipulation; }
 a { text-decoration: none; color: inherit; }
-section { position: relative; }
+section { position: relative; z-index: 1; }
 ::selection { background: var(--cyan-dim); color: var(--cyan); }
 
 /* scrollbar */
@@ -658,9 +660,9 @@ footer .f-right { display: flex; gap: 20px; align-items: center; }
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    REVEAL
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .reveal.visible { opacity: 1; transform: none; }
-.reveal-left { opacity: 0; transform: translateX(-28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal-left { opacity: 0; transform: translateX(-24px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .reveal-left.visible { opacity: 1; transform: none; }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
