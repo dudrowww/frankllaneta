@@ -397,6 +397,81 @@ section { position: relative; z-index: 1; }
 .sc h4 { font-size: 0.88rem; font-weight: 700; margin-bottom: 6px; color: #fff; }
 .sc p { font-size: 0.78rem; color: var(--text2); line-height: 1.6; }
 
+/* tech stack */
+.tech-stack-wrap {
+  margin-top: 28px;
+}
+.ts-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.ts-title {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  white-space: nowrap;
+}
+.ts-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border), transparent);
+}
+.ts-line:first-child {
+  background: linear-gradient(270deg, var(--border), transparent);
+}
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.ts-group {
+  padding: 16px 20px;
+}
+.ts-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0;
+}
+.ts-group-label {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  display: block;
+  margin-bottom: 12px;
+}
+.ts-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.ts-tags span {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: 6px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.ts-tags span:hover {
+  color: var(--cyan);
+  border-color: rgba(0,245,212,0.3);
+}
+
 /* about fun facts strip */
 .about-facts {
   display: flex; gap: 0;
