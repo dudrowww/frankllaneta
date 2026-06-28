@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- BACKGROUND -->
 <div class="bg-layer">
   <div class="bg-orb orb1"></div>
   <div class="bg-orb orb2"></div>
@@ -18,31 +17,38 @@
 </div>
 <div class="bg-grid"></div>
 
-<!-- ████████████████████████████████████████████
-     NAVBAR
-█████████████████████████████████████████████ -->
+<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <a href="#home" class="nav-logo">
-    <span class="bracket">[</span>
-    <span class="name">FRL</span>
-    <span class="bracket">]</span>
+    <span class="bracket">[</span><span class="name">FRL</span><span class="bracket">]</span>
     <span class="dot"></span>
   </a>
   <div class="nav-links">
     <a href="#home" class="active">home</a>
     <a href="#about">about</a>
     <a href="#skills">skills</a>
-    <a href="#experience">expirience</a>
+    <a href="#experience">experience</a>
+    <a href="#projects">projects</a>
     <a href="#contact">contact</a>
   </div>
   <div class="nav-right">
     <a href="#contact" class="hire-btn">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="#home">home</a>
+  <a href="#about">about</a>
+  <a href="#skills">skills</a>
+  <a href="#experience">experience</a>
+  <a href="#projects">projects</a>
+  <a href="#contact">contact</a>
+</div>
+<div class="drawer-overlay" id="drawerOverlay"></div>
 
-<!-- ████████████████████████████████████████████
-     HOME
-█████████████████████████████████████████████ -->
+<!-- HOME -->
 <section id="home">
   <div class="hero-left" style="position:relative;z-index:1;">
     <div class="hero-badge"><span class="blink"></span>Available for hire</div>
@@ -62,15 +68,12 @@
       <a href="#about" class="btn-outline">View My Story →</a>
     </div>
     <div class="hero-stats">
-      <div class="hstat"><b>—</b><span>Yrs Exp.</span></div>
-      <div class="hstat"><b>5</b><span>Projects</span></div>
-      <div class="hstat"><b>—</b><span>Clients</span></div>
+      <div class="hstat"><b>4</b><span>Months Exp.</span></div>
+      <div class="hstat"><b>2026</b><span>Graduate</span></div>
     </div>
   </div>
-
   <div class="hero-right">
-    <!-- Profile card -->
-    <div class="info-card" style="--top-color:var(--cyan); --ic-color:var(--cyan);">
+    <div class="info-card" style="--top-color:var(--cyan);--ic-color:var(--cyan);">
       <div class="ic-header">
         <span class="dot"></span>
         <span class="label">// Profile</span>
@@ -83,8 +86,7 @@
         <tr><td>status</td><td><span class="status-open-chip">Open to Work</span></td></tr>
       </table>
     </div>
-    <!-- Services card -->
-    <div class="info-card" style="--top-color:var(--purple); --ic-color:var(--purple);">
+    <div class="info-card" style="--top-color:var(--purple);--ic-color:var(--purple);">
       <div class="ic-header">
         <span class="dot" style="background:var(--purple);box-shadow:0 0 8px var(--purple);"></span>
         <span class="label" style="color:var(--purple);">// Services</span>
@@ -92,7 +94,7 @@
       <div class="service-chips">
         <span class="svc-chip">System Admin</span>
         <span class="svc-chip">Networking</span>
-        <span class="svc-chip">Web Dev</span>
+        <span class="svc-chip">Full-Stack Dev</span>
         <span class="svc-chip">Tech Support</span>
         <span class="svc-chip">Multimedia</span>
       </div>
@@ -100,39 +102,37 @@
   </div>
 </section>
 
-<!-- ████████████████████████████████████████████
-     ABOUT
-█████████████████████████████████████████████ -->
+<!-- ABOUT -->
 <section id="about">
   <div class="sec-wrap">
     <div class="sec-eyebrow"><span class="num">01</span><span class="slash">// about.me</span></div>
     <h2 class="sec-h">Who <span class="accent">Am I?</span></h2>
     <div class="about-grid">
-
-      <!-- Left col: bio + data table + buttons -->
       <div class="reveal-left">
         <p class="about-desc">I'm a dedicated <strong>IT Graduate</strong> with a strong foundation in network administration, system management, and full-stack web development. I thrive at the intersection of hardware and code — equally at home under a server rack or inside a code editor.</p>
         <p class="about-desc">Whether it's configuring a secure server, diagnosing a tricky hardware fault, or shipping a responsive web app — I bring <strong>precision and purpose</strong> to every task. I believe in learning fast, documenting well, and never leaving a bug unexplained.</p>
-
         <div class="about-data">
           <div class="data-row">
             <div class="data-key">Name</div>
             <div class="data-val">Frank Riley Llaneta</div>
           </div>
           <div class="data-row">
-            <div class="data-key">Location</div>
-            <div class="data-val">Santa Rosa, Laguna, PH</div>
+            <div class="data-key">Birthday</div>
+            <div class="data-val">March 2, 2004</div>
+          </div>
+          <div class="data-row">
+            <div class="data-key">Hobbies</div>
+            <div class="data-val">Online Games, Editing, Sports</div>
+          </div>
+          <div class="data-row">
+            <div class="data-key">Graduated</div>
+            <div class="data-val">San Pedro College of Business Administration</div>
           </div>
           <div class="data-row">
             <div class="data-key">Degree</div>
-            <div class="data-val">BS Information Technology</div>
-          </div>
-          <div class="data-row">
-            <div class="data-key">Status</div>
-            <div class="data-val open">Open to Work</div>
+            <div class="data-val">Bachelor of Science in Infomation Technology</div>
           </div>
         </div>
-
         <div class="about-btns">
           <a href="llanetacv.pdf" download class="btn-glow" style="font-size:0.72rem;padding:11px 24px;">
             <svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -140,72 +140,58 @@
           </a>
           <a href="llanetaportfolio.pdf" download class="btn-outline" style="font-size:0.72rem;padding:11px 24px;">
             <svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            Creative Portfolio
+            <span style="display:flex;flex-direction:column;gap:1px;text-align:left;">
+              <span>Creative Portfolio</span>
+              <span style="font-size:0.58rem;opacity:0.45;letter-spacing:0.1em;font-weight:400;">as of January 2026</span>
+            </span>
           </a>
         </div>
       </div>
-
-      <!-- Right col: what I do cards -->
       <div class="reveal">
         <div class="serv-cards">
           <div class="sc" style="--sc-color:var(--cyan);--sc-bg:var(--cyan-dim);">
-            <div class="sc-icon">
-              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
+            <div class="sc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
             <h4>Web Development</h4>
             <p>Responsive, accessible front-ends and PHP/MySQL back-ends built from scratch.</p>
           </div>
           <div class="sc" style="--sc-color:var(--purple);--sc-bg:var(--purple-dim);">
-            <div class="sc-icon">
-              <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            </div>
+            <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
             <h4>Tech Support</h4>
             <p>Hardware diagnostics, OS troubleshooting, and user support — fast and methodical.</p>
           </div>
           <div class="sc" style="--sc-color:var(--pink);--sc-bg:rgba(255,107,157,0.1);">
-            <div class="sc-icon">
-              <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-            </div>
+            <div class="sc-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
             <h4>Networking</h4>
-            <p>Network setup, configuration, and maintenance — from home labs to corporate switches.</p>
+            <p>Configuring routers, switches, and access points. Diagnosing connectivity issues and keeping networks running</p>
           </div>
           <div class="sc" style="--sc-color:var(--amber);--sc-bg:rgba(255,201,71,0.1);">
-            <div class="sc-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-            </div>
+            <div class="sc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
             <h4>Multimedia</h4>
-            <p>Video editing, 3D modelling, and design work using Blender, Canva, and more.</p>
+            <p>Video editing, small experience in 3D modelling, and design work using Canva, and more.</p>
           </div>
         </div>
-
-        <!-- Quick facts strip -->
-        <div class="about-facts">
-          <div class="fact-item">
-            <div class="fact-label">currently</div>
-            <div class="fact-value">looking for work</div>
+        <div class="tech-stack-wrap">
+          <div class="ts-header">
+            <span class="ts-line"></span>
+            <span class="ts-title">Tech Stack</span>
+            <span class="ts-line"></span>
           </div>
-          <div class="fact-item">
-            <div class="fact-label">hobbies</div>
-            <div class="fact-value">games, 3D, tinkering</div>
-          </div>
-          <div class="fact-item">
-            <div class="fact-label">from</div>
-            <div class="fact-value">Santa Rosa, Laguna</div>
-          </div>
-          <div class="fact-item">
-            <div class="fact-label">degree</div>
-            <div class="fact-value">BS Info Tech, 2026</div>
+          <div class="tech-stack">
+            <div class="ts-group">
+              <span class="ts-group-label">Languages</span>
+              <div class="ts-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Java</span><span>Kotlin</span><span>XML</span><span>C#</span>
+              </div>
+            </div>
+            <div class="ts-divider"></div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ████████████████████████████████████████████
-     SKILLS
-█████████████████████████████████████████████ -->
+<!-- SKILLS -->
 <section id="skills">
   <div class="sec-wrap">
     <div class="sec-eyebrow"><span class="num">02</span><span class="slash">// skills.json</span></div>
@@ -250,7 +236,7 @@
       </div>
       <div>
         <div class="tools-wrap">
-          <p class="skill-label">// Tools & Technologies</p>
+          <p class="skill-label">// Tools &amp; Technologies</p>
           <div class="tools-cloud">
             <span class="tool-tag">VS Code</span>
             <span class="tool-tag">Git / GitHub</span>
@@ -268,9 +254,7 @@
   </div>
 </section>
 
-<!-- ████████████████████████████████████████████
-     EXPERIENCE
-█████████████████████████████████████████████ -->
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="sec-wrap">
     <div class="sec-eyebrow"><span class="num">03</span><span class="slash">// experience.log</span></div>
@@ -299,9 +283,7 @@
   </div>
 </section>
 
-<!-- ████████████████████████████████████████████
-     PROJECTS
-█████████████████████████████████████████████ -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="sec-wrap">
     <div class="sec-eyebrow"><span class="num">04</span><span class="slash">// projects.dir</span></div>
@@ -310,48 +292,23 @@
     <!-- FluentFlow -->
     <div class="proj-row reveal">
       <div class="proj-row-left">
-        <div class="proj-type-badge" style="--badge-color:var(--purple);margin-bottom:16px;">Capstone Project</div>
+        <div class="proj-type-badge" style="--badge-color:var(--purple);">Capstone Project</div>
         <h3 class="proj-title">FluentFlow</h3>
         <p class="proj-subtitle" style="font-size:0.85rem;line-height:1.6;margin-top:10px;"><span style="color:var(--purple);font-weight:700;">A Bilingual Language Proficiency App</span> for Filipino and English for Grade 7 Students</p>
         <p class="proj-desc">An Android-based app developed for Grade 7 students at Pacita Complex National High School struggling with vocabulary and sentence construction in both Filipino and English. FluentFlow uses interactive quizzes, sentence-building exercises, and reading materials to help students improve their bilingual literacy at their own pace.</p>
       </div>
       <div class="proj-row-right">
         <div class="proj-data">
-          <div class="data-row">
-            <div class="data-key">Type</div>
-            <div class="data-val">Capstone Project</div>
-          </div>
-          <div class="data-row">
-            <div class="data-key">Year</div>
-            <div class="data-val">2025 — 2026</div>
-          </div>
-          <div class="data-row">
-            <div class="data-key">Platform</div>
-            <div class="data-val">Android</div>
-          </div>
-          <div class="data-row">
-            <div class="data-key">With</div>
-            <div class="data-val">Aldovino, J. &amp; Lingayo, P.</div>
-          </div>
+          <div class="data-row"><div class="data-key">Type</div><div class="data-val">Capstone Project</div></div>
+          <div class="data-row"><div class="data-key">Year</div><div class="data-val">2025 — 2026</div></div>
+          <div class="data-row"><div class="data-key">Platform</div><div class="data-val">Android</div></div>
         </div>
-        <p style="font-family:var(--mono);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--text2);margin:18px 0 12px;">// Stack</p>
+        <p style="font-family:var(--mono);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--text2);margin:18px 0 -30px;">// Stack</p>
         <div class="about-facts">
-          <div class="fact-item">
-            <div class="fact-label">language</div>
-            <div class="fact-value">Kotlin, XML</div>
-          </div>
-          <div class="fact-item">
-            <div class="fact-label">database</div>
-            <div class="fact-value">Firebase</div>
-          </div>
-          <div class="fact-item">
-            <div class="fact-label">ide</div>
-            <div class="fact-value">Android Studio</div>
-          </div>
-          <div class="fact-item">
-            <div class="fact-label">design</div>
-            <div class="fact-value">Canva, Photoshop</div>
-          </div>
+          <div class="fact-item"><div class="fact-label">language</div><div class="fact-value">Kotlin, XML</div></div>
+          <div class="fact-item"><div class="fact-label">database</div><div class="fact-value">Firebase</div></div>
+          <div class="fact-item"><div class="fact-label">ide</div><div class="fact-value">Android Studio</div></div>
+          <div class="fact-item"><div class="fact-label">design</div><div class="fact-value">Canva, Photoshop</div></div>
         </div>
       </div>
     </div>
@@ -359,48 +316,22 @@
     <!-- PlantPal -->
     <div class="proj-row reveal">
       <div class="proj-row-left">
-        <div class="proj-type-badge" style="--badge-color:var(--green);margin-bottom:16px;">Software Engineering</div>
+        <div class="proj-type-badge" style="--badge-color:var(--green);">Software Engineering</div>
         <h3 class="proj-title">PlantPal</h3>
         <p class="proj-subtitle" style="font-size:0.85rem;line-height:1.6;margin-top:10px;"><span style="color:var(--green);font-weight:700;">A Nurturing Virtual Plant Mobile Game</span> Designed for Engagement and Growth Simulation</p>
         <p class="proj-desc">A mobile game where players pick a seed and raise it through different growth stages — watering, fertilizing, and keeping it healthy. Each plant has its own care requirements and the game gets harder as your plant grows. Built to make plant care feel fun rather than like a chore.</p>
       </div>
       <div class="proj-row-right">
         <div class="proj-data">
-          <div class="data-row">
-            <div class="data-key">Type</div>
-            <div class="data-val">Software Engineering</div>
-          </div>
-          <div class="data-row">
-            <div class="data-key">Year</div>
-            <div class="data-val">2025 — 2026</div>
-          </div>
-          <div class="data-row">
-            <div class="data-key">Platform</div>
-            <div class="data-val">Android / Mobile</div>
-          </div>
-          <div class="data-row">
-            <div class="data-key">With</div>
-            <div class="data-val">Aldovino, J. &amp; Lingayo, P.</div>
-          </div>
+          <div class="data-row"><div class="data-key">Type</div><div class="data-val">Software Engineering Project</div></div>
+          <div class="data-row"><div class="data-key">Year</div><div class="data-val">2025 — 2026</div></div>
+          <div class="data-row"><div class="data-key">Platform</div><div class="data-val">Android / Mobile</div></div>
         </div>
-        <p style="font-family:var(--mono);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--text2);margin:18px 0 12px;">// Stack</p>
+        <p style="font-family:var(--mono);font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--text2);margin:18px 0 -30px;">// Stack</p>
         <div class="about-facts">
-          <div class="fact-item">
-            <div class="fact-label">language</div>
-            <div class="fact-value">C#</div>
-          </div>
-          <div class="fact-item">
-            <div class="fact-label">storage</div>
-            <div class="fact-value">PlayerPrefs</div>
-          </div>
-          <div class="fact-item">
-            <div class="fact-label">engine</div>
-            <div class="fact-value">Unity 3D</div>
-          </div>
-          <div class="fact-item">
-            <div class="fact-label">design</div>
-            <div class="fact-value">Blender, Canva</div>
-          </div>
+          <div class="fact-item"><div class="fact-label">language</div><div class="fact-value">C#</div></div>
+          <div class="fact-item"><div class="fact-label">engine</div><div class="fact-value">Unity 3D</div></div>
+          <div class="fact-item"><div class="fact-label">design</div><div class="fact-value">Blender, Canva, Photoshop</div></div>
         </div>
       </div>
     </div>
@@ -408,9 +339,7 @@
   </div>
 </section>
 
-<!-- ████████████████████████████████████████████
-     CONTACT
-█████████████████████████████████████████████ -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="sec-wrap">
     <div class="sec-eyebrow"><span class="num">05</span><span class="slash">// contact.init</span></div>
@@ -439,8 +368,7 @@
           </div>
         </div>
         <div class="soc-list">
-          <a href="#" target="_blank" rel="noopener" class="soc-btn">LinkedIn</a>
-          <a href="#" target="_blank" rel="noopener" class="soc-btn">GitHub</a>
+          <a href="https://www.linkedin.com/in/frank-riley-llaneta-2b8938414" target="_blank" rel="noopener" class="soc-btn">LinkedIn</a>
           <a href="https://www.facebook.com/prankrayli" target="_blank" rel="noopener" class="soc-btn">Facebook</a>
           <a href="https://www.instagram.com/dudrowww" target="_blank" rel="noopener" class="soc-btn">Instagram</a>
         </div>
@@ -455,7 +383,7 @@
           <div class="cta-panel-body">
             <p class="cta-label">// new message</p>
             <h3 class="cta-title">Got something<br>in <span class="acc">mind?</span></h3>
-            <p class="cta-sub">Click below to open a Gmail compose window — drop me a message and let's get the conversation started.</p>
+            <p class="cta-sub">Drop me a message through Gmail and I'll get back to you.</p>
             <a href="https://mail.google.com/mail/?view=cm&to=frankllaneta.careers@gmail.com&su=" target="_blank" rel="noopener" class="btn-send">
               I'm Interested!
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
