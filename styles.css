@@ -24,6 +24,9 @@
   --sans:     'Outfit', sans-serif;
   --nav-h:    64px;
   --radius:   14px;
+  --tl-line-center: 7.5px;
+  --tl-dot-size: 13px;
+  --tl-indent: 32px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -583,10 +586,10 @@ section { position: relative; z-index: 1; }
    EXPERIENCE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 #experience { background: linear-gradient(180deg, var(--bg2) 0%, var(--bg1) 100%); }
-.exp-timeline { position: relative; padding-left: 32px; }
+.exp-timeline { position: relative; padding-left: var(--tl-indent); }
 .exp-timeline::before {
   content: '';
-  position: absolute; left: 7px; top: 8px; bottom: 8px; width: 1px;
+  position: absolute; left: calc(var(--tl-line-center) - 0.5px); top: 8px; bottom: 8px; width: 1px;
   background: linear-gradient(180deg, var(--cyan), var(--purple), transparent);
 }
 .exp-item {
@@ -594,8 +597,8 @@ section { position: relative; z-index: 1; }
 }
 .exp-item::before {
   content: '';
-  position: absolute; left: -29px; top: 8px;
-  width: 13px; height: 13px; border-radius: 50%;
+  position: absolute; left: calc(var(--tl-line-center) - (var(--tl-dot-size) / 2) - var(--tl-indent)); top: 8px;
+  width: var(--tl-dot-size); height: var(--tl-dot-size); border-radius: 50%;
   background: var(--bg2);
   border: 2px solid var(--cyan);
   box-shadow: 0 0 14px var(--cyan-glow);
@@ -964,7 +967,7 @@ footer .f-right { display: flex; gap: 20px; align-items: center; }
   .hire-btn { padding: 7px 14px; font-size: 0.65rem; }
 
   /* hero */
-  #home { padding: 72px 16px 44px; gap: 24px; }
+  #home { padding: 56px 16px 44px; gap: 24px; }
   .hero-badge { font-size: 0.62rem; margin-bottom: 20px; }
   .hero-greeting { font-size: 0.75rem; }
   .hero-name {
@@ -1004,6 +1007,7 @@ footer .f-right { display: flex; gap: 20px; align-items: center; }
   .about-desc { font-size: 0.9rem; }
   .data-key { width: 90px; padding: 11px 12px; font-size: 0.62rem; }
   .data-val { padding: 11px 12px; font-size: 0.82rem; }
+  .about-data .data-row { align-items: flex-start; }
   .about-btns { flex-direction: column; }
   .about-btns .btn-glow,
   .about-btns .btn-outline { width: 100%; justify-content: center; }
@@ -1023,7 +1027,7 @@ footer .f-right { display: flex; gap: 20px; align-items: center; }
   .sk-name { font-size: 0.82rem; }
 
   /* exp */
-  .exp-timeline { padding-left: 24px; }
+  .exp-timeline { --tl-indent: 24px; }
   .exp-card { padding: 20px 18px; }
   .exp-role { font-size: 1rem; }
   .exp-company { font-size: 0.68rem; }
