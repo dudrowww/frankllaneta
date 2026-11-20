@@ -33,7 +33,7 @@ function closeDrawer({ restoreFocus = false } = {}) {
   drawerOverlay.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
   if (restoreFocus) hamburger.focus();
-  // hide after transition ends so it's fully out of the way.
+  // hide after transition ends so it's fully out of the way
   setTimeout(() => {
     mobileDrawer.style.display = "none";
     drawerOverlay.style.display = "none";
