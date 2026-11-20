@@ -967,7 +967,7 @@ footer .f-right { display: flex; gap: 20px; align-items: center; }
   .hire-btn { padding: 7px 14px; font-size: 0.65rem; }
 
   /* hero */
-  #home { padding: 56px 16px 44px; gap: 24px; }
+  #home { padding: 44px 16px 44px; gap: 24px; }
   .hero-badge { font-size: 0.62rem; margin-bottom: 20px; }
   .hero-greeting { font-size: 0.75rem; }
   .hero-name {
